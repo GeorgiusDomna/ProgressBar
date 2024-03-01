@@ -2,6 +2,9 @@
 # ProgressBar
 Тестовое задание для Ozon Fintech
 
+## Deploy ##
+
+GitHub Pages: https://georgiusdomna.github.io/ProgressBar/
 
 ## Задание ##
 
@@ -53,7 +56,4 @@ Animate и Hide – логические переключатели on / off, с
 1. Изменение акцентного цвета.
 2. Изменение периода вращения.
 3. Изменение ширины дуги кольца прогресса.
-
-
-## Deploy ##
 
