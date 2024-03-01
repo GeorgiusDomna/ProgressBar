@@ -1,0 +1,37 @@
+#progressBar {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: conic-gradient(var(--accent-color) var(--process-procent), var(--minor-color) 0deg);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#progressBar::before {
+  content: "";
+  position: absolute;
+  width: var(--progress-width);
+  height: var(--progress-width);
+  background: white;
+  border-radius: 50%;
+}
+
+.management_switch.optional {
+  display: none;
+}
+
+
+.spin {
+  animation: spin var(--duration-spin) ease-in-out infinite;
+}
+.hide {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+}
+ @keyframes spin {
+   to {
+     transform: rotate(360deg);
+   }
+ }

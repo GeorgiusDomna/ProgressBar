@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* Root variables for customizing styles */
+:root {
+  --process-procent: 25%;
+  --progress-width: 125px;
+  --duration-spin: 2s;
+  --accent-color: #4741F8;
+  --minor-color: #ECEFF6;
+  --bg-btn: #DEE5EB;
+}
+* {
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: #ECEFF6;
+}
+.container {
+  position: relative;
+  width: 568px;
+  height: 320px;
+  padding: 20px;
+  background: white;
+}
+
+header {
+  position: absolute;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+
+ .progress-management {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+.management_switch {
+  display: flex;
+  align-items: center;
+}
+
+ input {
+  width: 55px;
+  height: 34px;
+  text-align: center;
+  margin-right: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  overflow: hidden;
+  border: solid 2px black;
+  border-radius: 30px;
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+input:focus {
+  border: solid 2px var(--accent-color);
+  outline: none;
+}
+
+label {
+  margin-right: 1rem;
+}
+.label-text {
+  margin-right: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 55px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-btn);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--accent-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(21px);
+  -ms-transform: translateX(21px);
+  transform: translateX(21px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+@media screen and (orientation: landscape) {
+  .container {
+    width: 568px;
+    height: 320px;
+  }
+  main {
+    flex-direction: none;
+  }
+}
+
+@media screen and (max-width: 600px), (orientation: portrait) {
+  .container {
+    width: 320px;
+    height: 568px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+}
